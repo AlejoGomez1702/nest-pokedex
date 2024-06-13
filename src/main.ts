@@ -16,6 +16,7 @@ async function main() {
     }
   }));
 
-  await app.listen(3000);
+  await app.listen( process.env.PORT || 3000 );
+  console.log(`Application is running on port: ${ process.env.PORT || 3000 }`);
 }
 main();
